@@ -1,0 +1,8 @@
+#EZC file
+
+CC = g++
+FILES = {.cpp|.h|!_l.cpp}
+
+cmd = $CC $FILES
+
+>$cmd
