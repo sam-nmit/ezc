@@ -25,6 +25,7 @@ namespace ezc{
 
 bool exec(std::string cmd);
 std::vector<std::string> getfiles();
+bool has_suffix(std::string src, std::string suffix);
 
 }
 

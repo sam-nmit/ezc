@@ -9,6 +9,8 @@
 
 int main(){
     
+
+    
     std::ifstream f(EZC_FILE_NAME);
 
     if(!f.is_open()){
@@ -16,20 +18,13 @@ int main(){
         return 0;
     }
 
-
     ezc::Tokenizer tokenreader(&f);
-
     ezc::Parser p(&tokenreader);
+
     p.ParseFile();
 
     for(auto v:p.identifers){
-        std::cout << v.first << ": " << v.second << std::endl;
-    }
-
-    std::vector<std::string> files = ezc::getfiles();
-
-    for(auto file:files){
-        std::cout << file << std::endl;
+        std::cout << v.first <<  " => " << v.second << std::endl;
     }
 
     return 0;

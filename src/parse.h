@@ -5,14 +5,21 @@
 #include <map>
 #include <string>
 #include "token.h"
-
+#include "util.h"
 namespace ezc{
+
+struct FileSearchCondition{
+    std::string suffix;
+    bool exclusive;
+};
 
 class Parser{
     public:
         Parser(Tokenizer* t);
         void ParseFile();
         std::map<std::string,std::string> identifers;
+        std::vector<FileSearchCondition> ParseFileSearchQuery(std::string s);
+
 
     private:
         Tokenizer * tk;
