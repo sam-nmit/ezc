@@ -6,6 +6,7 @@
 #include <string>
 #include "token.h"
 #include "util.h"
+
 namespace ezc{
 
 struct FileSearchCondition{
@@ -18,7 +19,6 @@ class Parser{
         Parser(Tokenizer* t);
         void ParseFile();
         std::map<std::string,std::string> identifers;
-        std::vector<FileSearchCondition> ParseFileSearchQuery(std::string s);
 
 
     private:
@@ -27,6 +27,8 @@ class Parser{
 
         std::string ParseComplexString();
         bool LastIdentifier(Token* t_out);
+        std::vector<FileSearchCondition> ParseFileSearchQuery(std::string s);
+        std::string ParseFileSearch();
 };
 
 }

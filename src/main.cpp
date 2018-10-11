@@ -23,9 +23,5 @@ int main(){
 
     p.ParseFile();
 
-    for(auto v:p.identifers){
-        std::cout << v.first <<  " => " << v.second << std::endl;
-    }
-
     return 0;
 }

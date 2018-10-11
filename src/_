@@ -1,8 +1,0 @@
-#EZC file
-
-CC = g++
-FILES = {.cpp}
-
-cmd = $CC $FILES
-
->$cmd
